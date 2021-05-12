@@ -1,15 +1,20 @@
-package com.anjin.wiki;
+package com.anjin.wiki.config;
 
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
+//@ComponentScan({"com.anjin","com.test"})
+@ComponentScan("com.anjin")
 @SpringBootApplication
 public class WikiApplication {
 
+    //  WikiApplication所在包下面的子包会被自动扫描
+    //  启动类它爸爸的孩子
     private static final Logger LOG = LoggerFactory.getLogger(WikiApplication.class);
     public static void main(String[] args) {
 //        SpringApplication.run(WikiApplication.class, args);
