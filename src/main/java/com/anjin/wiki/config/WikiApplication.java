@@ -1,6 +1,7 @@
 package com.anjin.wiki.config;
 
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -11,6 +12,7 @@ import org.springframework.core.env.Environment;
 //@ComponentScan({"com.anjin","com.test"})
 @ComponentScan("com.anjin")
 @SpringBootApplication
+@MapperScan("com.anjin.wiki.mapper")
 public class WikiApplication {
 
     //  WikiApplication所在包下面的子包会被自动扫描
