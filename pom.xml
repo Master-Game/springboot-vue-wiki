@@ -12,10 +12,12 @@
     <artifactId>wiki</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>wiki</name>
-    <description>Anjin Wiki</description>
+    <description>Jiawa Wiki</description>
+
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -51,21 +53,45 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
+        <!--整合redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.70</version>
         </dependency>
 
-        <!-- pagehelper插件-->
+        <!-- pagehelper 插件-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.13</version>
         </dependency>
+
+        <!-- RocketMQ-->
+        <!--<dependency>-->
+        <!--    <groupId>org.apache.rocketmq</groupId>-->
+        <!--    <artifactId>rocketmq-spring-boot-starter</artifactId>-->
+        <!--    <version>2.0.2</version>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
+        <finalName>/dist/${artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

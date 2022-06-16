@@ -15,10 +15,9 @@ public class DemoController {
 
     @Resource
     private DemoService demoService;
-    
+
     @GetMapping("/list")
-    public List<Demo> list(){
+    public List<Demo> list() {
         return demoService.list();
     }
-
 }

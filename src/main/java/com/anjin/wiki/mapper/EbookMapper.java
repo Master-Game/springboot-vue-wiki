@@ -2,8 +2,9 @@ package com.anjin.wiki.mapper;
 
 import com.anjin.wiki.domain.Ebook;
 import com.anjin.wiki.domain.EbookExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface EbookMapper {
     long countByExample(EbookExample example);
